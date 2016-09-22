@@ -18,12 +18,15 @@
 <body>
 <div id="mainwrap" class="flex-container">
 
-    <header class="mdl-layout__header">
-        <h1><a href="/">Idoco</a></h1>
-        <h2>Was our manager</h2>
+    <header>
+        <div style="display: block" class="mdl-layout__header-row">
+            <!-- Title -->
+            <h1 id="title-idoco" class="mdl-layout-title"><b>IDOCO</b></h1>
+            <div class="mdl-layout-title">Was our manager</div>
+        </div>
     </header>
 
-    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
+    <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
         <div class="mdl-tabs__tab-bar">
             <a href="#graph" class="mdl-tabs__tab is-active">Appreciation Graph</a>
             <a href="#profile" class="mdl-tabs__tab">Profile</a>
@@ -77,7 +80,7 @@
                 <div id="diapo">
                     <!----------------img01------------------->
                     <div>
-                        <input type="radio" id="check_1" name="check" class="r_check" checked="checked">
+                        <input type="radio" id="check_1" name="check" class="r_check">
                         <label for="check_1" class="on_check">
                             <img class="vignette" src="./resources/1.png" alt="">
                         </label>
@@ -117,7 +120,7 @@
                     </div>
                     <!----------------img06------------------->
                     <div>
-                        <input type="radio" id="check_6" name="check" class="r_check" checked="checked">
+                        <input type="radio" id="check_6" name="check" class="r_check">
                         <label for="check_6" class="on_check">
                             <img class="vignette" src="./resources/6.PNG" alt="">
                         </label>
@@ -148,7 +151,7 @@
                     </div>
                     <!----------------img10------------------->
                     <div>
-                        <input type="radio" id="check_10" name="check" class="r_check">
+                        <input type="radio" id="check_10" name="check" class="r_check" checked="checked">
                         <label for="check_10" class="on_check">
                             <img class="vignette" src="./resources/10.gif" alt="">
                         </label>
