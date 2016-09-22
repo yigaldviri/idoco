@@ -1,10 +1,10 @@
-<html>
+<html ng-app="idoco">
 <head>
-
-    <script src="./idoco.js"> </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
+    <script src="./idoco.js"> </script>
     <link rel="stylesheet" href="./styles/graph.css">
     <link rel="stylesheet" href="./styles/idoco.css">
     <link rel="stylesheet" href="./styles/material/material.min.css">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div id="mainwrap" class="flex-container">
+<div id="mainwrap" class="flex-container" ng-controller="Ctrl">
 
     <header>
         <div style="display: block" class="mdl-layout__header-row">
@@ -28,10 +28,11 @@
 
     <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
         <div class="mdl-tabs__tab-bar">
-            <a href="#graph" class="mdl-tabs__tab is-active">Appreciation Graph</a>
-            <a href="#profile" class="mdl-tabs__tab">Profile</a>
-            <a href="#resume" class="mdl-tabs__tab">Resume</a>
-            <a href="#contact" class="mdl-tabs__tab">Favorite GIF</a>
+            <a ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
+            <a ng-click="state='resume'" href="#resume" class="mdl-tabs__tab">Resume</a>
+            <a ng-click="state='contact'" href="#contact" class="mdl-tabs__tab">Favorite GIF</a>
+            <a ng-click="state='graph'" href="#graph" class="mdl-tabs__tab">Appreciation Graph</a>
+            <a ng-click="state='song'" href="#song" class="mdl-tabs__tab">Favorite Song</a>
         </div>
 
         <!--<div style="clear:both"></div>-->
@@ -52,9 +53,6 @@
                         <li><a href="http://twitter.com/" class="external"></a></li>
                         <li><a href="http://linkedin.com/" class="external"></a></li>
                     </ul>
-                </div>
-                <div class="column col5 pl-50">
-                    <iframe src="//giphy.com/embed/tJeGZumxDB01q" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/mrw-reddit-comment-tJeGZumxDB01q">via GIPHY</a></p>
                 </div>
             </div>
 
@@ -239,6 +237,11 @@
                 </div>
 
                 <br/>
+            </div>
+
+            <!-------- SONG -------->
+            <div id="song" class="mdl-tabs__panel">
+                <iframe ng-if="isActive()" width="560" height="315" src="https://www.youtube.com/embed/B-N1yJyrQRY?autoplay=1" frameborder="0" allowfullscreen></iframe>
             </div>
 
         </div>
