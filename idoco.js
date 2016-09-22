@@ -1,3 +1,4 @@
+/*
 $(document).ready(function() {
 			    $(".section").not(":first").hide();
 			    $("ul#menu li:first").addClass("active").show(); 
@@ -11,4 +12,4 @@ $(document).ready(function() {
 			        return false;
 			    });
 			 
-			});
+			});*/
