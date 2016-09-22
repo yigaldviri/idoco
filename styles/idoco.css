@@ -190,7 +190,7 @@ Span 8:    100%
 }
 
 #contact {
-  background-color: #f0a30a;
+  /*background-color: #f0a30a;*/
 }
 
 #menu {
@@ -422,4 +422,82 @@ Span 8:    100%
   #menu li.active span {
     display:none;
   }
+}
+
+#diapo{
+    position:relative;
+    height:30em;
+    margin:auto;
+    text-align:center;
+    margin: 2em 2em;
+}
+#diapo div{
+    display:inline-block;
+}
+#diapo > * + *{
+    margin-left:5px;
+}
+.big_image{
+    position:absolute;
+    display:block;
+    width:600px;
+    top:100px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    opacity:0;
+    border:10px solid #FFF;
+    box-shadow: 0 2px 8px 2px #666;
+
+    -webkit-transform:scale(0.25);
+    -moz-transform:scale(0.25);
+    -ms-transform:scale(0.25);
+    -o-transform:scale(0.25);
+    transform:scale(0.25);
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.r_check, .on_check{
+    cursor: pointer;
+}
+.r_check:checked ~ label img{
+    opacity:0.25;
+    border:2px solid #006699;
+}
+.r_check:checked ~ .big_image {
+    opacity:1;
+
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+}
+.r_check{
+    /*  display:none;/* si masquer pas acces avec touche */
+    opacity:0;
+    position:absolute;
+}
+label img.vignette{
+    width:100px;
+    height:75px;
+    border:2px solid #FFF;
+}
+.retour{
+    color:#909090;
+    font-size:1em;
+    left:1em;
+    bottom:1em;
+    position:fixed;
+    text-decoration:none;
+    font-style:italic;
+    text-shadow:1px 1px 0px #FFF;
+}
+.retour:hover{
+    font-style:normal;
+    color:#706040;
 }
