@@ -97,7 +97,7 @@ function moveLines(i) {
   }
 }
 
-var tooltip = d3.selectAll(".tooltip");
+var tooltip = d3.selectAll(".tooltip:not(.css)");
 var HTMLabsoluteTip = d3.select("div.tooltip.absolute");
 var HTMLfixedTip = d3.select("div.tooltip.fixed");
 var HTMLmouseTip = d3.select("div.tooltip.mouse");
