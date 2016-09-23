@@ -1,11 +1,6 @@
 angular.module('idoco',[])
-	.controller("Ctrl", function($scope, $timeout, $location){
+	.controller("Ctrl", function($scope){
 
-        //initial state
-        $timeout( function() {
-            $scope.state = 'profile';
-            $location.path('/profile')
-        },1000);
         $scope.isActive = function() {
 			console.log("state is: " + $scope.state);
 			return $scope.state === 'song';
