@@ -197,7 +197,7 @@ Span 8:    100%
 }
 
 #profile {
-  background-color: #00aba9;
+  /*background-color: #00aba9;*/
 }
 
 #resume {
@@ -293,10 +293,10 @@ Span 8:    100%
   border-bottom:1px solid #00aba9;
 }
 
-#bioinfo .even {
+/*#bioinfo .even {
   background: rgba(0,0,0,0.3);
   border-bottom:1px solid #00aba9;
-}
+}*/
 
 .social {
   overflow:hidden;
