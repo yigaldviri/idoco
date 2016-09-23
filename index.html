@@ -28,16 +28,15 @@
 
     <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
         <div class="mdl-tabs__tab-bar">
-            <a id="initial-state" ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
+            <a ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
             <a ng-click="state='contact'" href="#contact" class="mdl-tabs__tab">Favorite GIF</a>
-            <a ng-click="state='graph'" href="#graph" class="mdl-tabs__tab">Appreciation Graph</a>
-            <a ng-click="state='song'" href="#song" class="mdl-tabs__tab">Favorite Song</a>
+            <a ng-click="state='graph'"   href="#graph"   class="mdl-tabs__tab">Appreciation Graph</a>
+            <a ng-click="state='song'"    href="#song"    class="mdl-tabs__tab">Favorite Song</a>
         </div>
 
-        <!--<div style="clear:both"></div>-->
         <div id="mdl-layout__content">
             <!-------- PROFILE -------->
-            <div ng-if="state=='profile'" id="profile" class="mdl-tabs__panel">
+            <div ng-if="state=='profile'" id="profile" class="mdl-tabs__panel" ng-class="{'is-active' : state === 'profile'}">
                 <div>
                     <table id="bioinfo">
                         <tbody>
@@ -200,7 +199,7 @@
                 </div>
             </div>
             <!-------- GRAPH -------->
-            <div ng-show="state=='graph'" id="graph" class="mdl-tabs__panel is-active">
+            <div ng-if="state=='graph'" id="graph" class="mdl-tabs__panel">
                 <br/>
 
                 <div id="container">
