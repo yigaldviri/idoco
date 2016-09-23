@@ -28,8 +28,7 @@
 
     <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
         <div class="mdl-tabs__tab-bar">
-            <a ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
-            <a ng-click="state='resume'" href="#resume" class="mdl-tabs__tab">Resume</a>
+            <a id="initial-state" ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
             <a ng-click="state='contact'" href="#contact" class="mdl-tabs__tab">Favorite GIF</a>
             <a ng-click="state='graph'" href="#graph" class="mdl-tabs__tab">Appreciation Graph</a>
             <a ng-click="state='song'" href="#song" class="mdl-tabs__tab">Favorite Song</a>
@@ -46,31 +45,58 @@
                             <td class="odd">Name</td>
                             <td class="even">Idoco</td>
                         </tr>
+                        <tr>
+                            <td class="odd">Nationality</td>
+                            <td class="even">Ginger</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">IQ</td>
+                            <td class="even">196</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Best Friend</td>
+                            <td class="even">Zehava Galo'n</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Hobbies</td>
+                            <td class="even">As a descended of the High jewish ginger holy priests family he loves to make sacrifices in the holy temple and cure people of leprosy</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Where is Benny</td>
+                            <td class="even">There is no Benny</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Languages</td>
+                            <td class="even">English, Hebrew, Everything that compiles, everything that don't</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Knowledge</td>
+                            <td class="even">Google. the entire archive</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Role models</td>
+                            <td class="even">Einstein, Hawking, Newton, Turing, Walter Lewin, Bennet (brother), Miron, Amir Benayun, The Shadow, Shimon Parnas, Eli Luzon, Rachely Rotner, Moshe katzav, Liran grey shirt</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Moto</td>
+                            <td class="even">A developer who doesn't know the past, hi's present is thin and hi's future is vague</td>
+                        </tr>
+                        <tr>
+                            <td class="odd">Extra</td>
+                            <td class="even">
+                                <ul>
+                                    <li>Idoco never talk about fight club</li>
+                                    <li>Idoco let the wookiee win</li>
+                                    <li>Idoco shoots, no talk</li>
+                                    <li>Idoco knows exactly how Marcellus Wallace looks like (not like a bitch)</li>
+                                    <li>Frankly, does give a damn</li>
+                                </ul>
+                            </td>
+                        </tr>
+
                         </tbody>
                     </table>
-                    <ul class="social">
-                        <li><a href="http://facebook.com/" class="external"></a></li>
-                        <li><a href="http://twitter.com/" class="external"></a></li>
-                        <li><a href="http://linkedin.com/" class="external"></a></li>
-                    </ul>
                 </div>
-            </div>
-
-            <!-------- RESUME -------->
-            <div ng-if="state=='resume'" id="resume" class="mdl-tabs__panel">
-                <table id="cv">
-                    <tbody>
-                    <tr>
-                        <td class="col2"><div class="date">April 2012 - present</div></td>
-                        <td class="col6 pl-30">
-                            <p class="company">Nolio</p>
-                            <p class="title">QA</p>
-                            <p class="description">Lorem ipsum dolor sit amet, con  mj>olajuwon  sectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
             </div>
 
             <!-------- CONTACT -------->
@@ -82,7 +108,7 @@
                         <label for="check_1" class="on_check">
                             <img class="vignette" src="./resources/1.png" alt="">
                         </label>
-                        <img class="big_image" src="./resources/1.png" alt="">
+                        <img class="big_image" style="width: 35%" src="./resources/1.png" alt="">
                     </div>
                     <!----------------img02------------------->
 
@@ -122,7 +148,7 @@
                         <label for="check_6" class="on_check">
                             <img class="vignette" src="./resources/6.PNG" alt="">
                         </label>
-                        <img class="big_image" src="./resources/6.PNG" alt=""></div>
+                        <img class="big_image" style="width: 70%" src="./resources/6.PNG" alt=""></div>
                     <!----------------img07------------------->
 
                     <div>
@@ -174,7 +200,7 @@
                 </div>
             </div>
             <!-------- GRAPH -------->
-            <div ng-if="state=='graph'" id="graph" class="mdl-tabs__panel is-active">
+            <div ng-show="state=='graph'" id="graph" class="mdl-tabs__panel is-active">
                 <br/>
 
                 <div id="container">
@@ -248,7 +274,7 @@
     </div>
 
     <div id="footer">
-        do we need a footer?
+        // TODO: Sharon - do we need a footer? also add permission checks, penetration test and unit testing.
     </div>
 </div>
 <script type="text/javascript" src="script.js"></script>
