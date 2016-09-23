@@ -38,7 +38,7 @@
         <!--<div style="clear:both"></div>-->
         <div id="mdl-layout__content">
             <!-------- PROFILE -------->
-            <div id="profile" class="mdl-tabs__panel">
+            <div ng-if="state=='profile'" id="profile" class="mdl-tabs__panel">
                 <div>
                     <table id="bioinfo">
                         <tbody>
@@ -57,7 +57,7 @@
             </div>
 
             <!-------- RESUME -------->
-            <div id="resume" class="mdl-tabs__panel">
+            <div ng-if="state=='resume'" id="resume" class="mdl-tabs__panel">
                 <table id="cv">
                     <tbody>
                     <tr>
@@ -74,7 +74,7 @@
             </div>
 
             <!-------- CONTACT -------->
-            <div id="contact" class="mdl-tabs__panel">
+            <div ng-if="state=='contact'" id="contact" class="mdl-tabs__panel">
                 <div id="diapo">
                     <!----------------img01------------------->
                     <div>
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <!-------- GRAPH -------->
-            <div id="graph" class="mdl-tabs__panel is-active">
+            <div ng-if="state=='graph'" id="graph" class="mdl-tabs__panel is-active">
                 <br/>
 
                 <div id="container">
@@ -240,7 +240,7 @@
             </div>
 
             <!-------- SONG -------->
-            <div align="center" id="song" class="mdl-tabs__panel" style="margin: 100px">
+            <div ng-if="state=='song'" align="center" id="song" class="mdl-tabs__panel" style="margin: 100px">
                 <iframe ng-if="isActive()" width="560" height="315" src="https://www.youtube.com/embed/B-N1yJyrQRY?autoplay=1" frameborder="0" allowfullscreen></iframe>
             </div>
 
