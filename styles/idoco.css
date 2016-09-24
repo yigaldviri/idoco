@@ -452,6 +452,9 @@ Span 8:    100%
 #diapo > * + *{
     margin-left:5px;
 }
+.spacing {
+    margin-left:5px;
+}
 .big_image{
     position:absolute;
     display:block;
