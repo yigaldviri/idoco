@@ -287,17 +287,6 @@ Span 8:    100%
   padding:5px 10px;
 }
 
-#bioinfo .odd {
-  background: rgba(0,0,0,0.5);
-  border-right:1px solid #00aba9;
-  border-bottom:1px solid #00aba9;
-}
-
-/*#bioinfo .even {
-  background: rgba(0,0,0,0.3);
-  border-bottom:1px solid #00aba9;
-}*/
-
 .social {
   overflow:hidden;
   padding:0;
@@ -536,34 +525,6 @@ ul.social-network {
 ul.social-network li {
     display: inline;
     margin: 0 5px;
-}
-
-
-/* footer social icons */
-.social-network a.icoRss:hover {
-    background-color: #ff4500;
-}
-.social-network a.icoFacebook:hover {
-    background-color:#3B5998;
-}
-.social-network a.icoTwitter:hover {
-    background-color:#33ccff;
-}
-.social-network a.icoGoogle:hover {
-    background-color:#BD3518;
-}
-.social-network a.icoVimeo:hover {
-    background-color:#0590B8;
-}
-.social-network a.icoLinkedin:hover {
-    background-color:#007bb7;
-}
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
-    color:#fff;
-}
-a.socialIcon:hover, .socialHoverClass {
-    color:#44BCDD;
 }
 
 .social-circle li a {
