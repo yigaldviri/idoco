@@ -571,3 +571,9 @@ ul.social-network li {
     border: 0;
     z-index: 1000;
 }
+
+.idoco-graph {
+    margin-top: 23px;
+    width: 90%;
+    height: 67%;
+}
