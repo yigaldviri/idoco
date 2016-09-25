@@ -5,8 +5,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.10/d3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/TweenMax.min.js"></script>
     <script src="./idoco.js"> </script>
+    <script src="./modernizr.custom.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/characters/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="styles/characters/demo.css" />
+    <link rel="stylesheet" type="text/css" href="styles/characters/component.css" />
     <link rel="stylesheet" href="./styles/graph.css">
     <link rel="stylesheet" href="./styles/idoco.css">
+    <link rel="stylesheet" href="./styles/planet.css">
     <link rel="stylesheet" href="./styles/material/material.min.css">
     <script src="./styles/material/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -17,8 +23,16 @@
 
 <body>
 <div id="mainwrap" class="flex-container" ng-controller="Ctrl">
+    <!--fork me link-->
+    <a href="https://github.com/yigaldviri/idoco/" class="hide-on-med-and-down">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
+             class="fork-me-link" alt="Fork me on GitHub">
+    </a>
 
     <header>
+        <ul class="social-network social-circle">
+            <li><a href="http://idoco.github.io/map-chat" target="_blank" title="Map Chat"><img src="./favicon.ico" alt=""></a></li>
+        </ul>
         <div style="display: block">
             <!-- Title -->
             <h1 id="title-idoco" class="mdl-layout-title"><b>IDOCO</b></h1>
@@ -26,8 +40,10 @@
         </div>
     </header>
 
-    <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch">
-        <div class="mdl-tabs__tab-bar">
+
+
+    <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch" ng-class="{'planet-background' : state === 'profile'}">
+        <div class="mdl-tabs__tab-bar" ng-class="{'planet-title' : state === 'profile'}">
             <a ng-click="state='profile'" href="#profile" class="mdl-tabs__tab is-active">Profile</a>
             <a ng-click="state='contact'" href="#contact" class="mdl-tabs__tab">Favorite GIF</a>
             <a ng-click="state='graph'"   href="#graph"   class="mdl-tabs__tab">Appreciation Graph</a>
@@ -38,49 +54,50 @@
             <!-------- PROFILE -------->
             <div ng-if="state=='profile'" id="profile" class="mdl-tabs__panel" ng-class="{'is-active' : state === 'profile'}">
                 <div>
+
                     <table id="bioinfo">
                         <tbody>
-                        <tr>
-                            <td class="odd">Name</td>
-                            <td class="even">Idoco</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Nationality</td>
-                            <td class="even">Ginger</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">IQ</td>
-                            <td class="even">196</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Best Friend</td>
-                            <td class="even">Zehava Galo'n</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Hobbies</td>
-                            <td class="even">As a descended of the High jewish ginger holy priests family he loves to make sacrifices in the holy temple and cure people of leprosy</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Where is Benny</td>
-                            <td class="even">There is no Benny</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Languages</td>
-                            <td class="even">English, Hebrew, Everything that compiles, everything that don't</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Knowledge</td>
-                            <td class="even">Google. the entire archive</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Role models</td>
-                            <td class="even">Einstein, Hawking, Newton, Turing, Walter Lewin, Bennet (brother), Miron, Amir Benayun, The Shadow, Shimon Parnas, Eli Luzon, Rachely Rotner, Moshe katzav, Liran grey shirt</td>
-                        </tr>
-                        <tr>
-                            <td class="odd">Moto</td>
-                            <td class="even">A developer who doesn't know the past, hi's present is thin and hi's future is vague</td>
-                        </tr>
-                        <tr>
+                            <tr>
+                                <td class="odd">Name</td>
+                                <td class="even">Idoco</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Nationality</td>
+                                <td class="even">Ginger</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">IQ</td>
+                                <td class="even">196</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Best Friend</td>
+                                <td class="even">Zehava Galo'n</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Hobbies</td>
+                                <td class="even">As a descended of the High jewish ginger holy priests family he loves to make sacrifices in the holy temple and cure people of leprosy</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Where is Benny?</td>
+                                <td class="even">There is no Benny</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Languages</td>
+                                <td class="even">English, Hebrew, Everything that compiles, everything that don't</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Knowledge</td>
+                                <td class="even">Google. the entire archive</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Role models</td>
+                                <td class="even">Einstein, Hawking, Newton, Turing, Walter Lewin, Bennet (brother), Miron, Amir Benayun, The Shadow, Shimon Parnas, Eli Luzon, Rachely Rotner, Moshe katzav, Liran "grey-shirt"</td>
+                            </tr>
+                            <tr>
+                                <td class="odd">Moto</td>
+                                <td class="even">A developer who doesn't know hi's past, hi's present is thin and hi's future is vague</td>
+                            </tr>
+                            <tr>
                             <td class="odd">Extra</td>
                             <td class="even">
                                 <ul>
@@ -91,11 +108,29 @@
                                     <li>Frankly, does give a damn</li>
                                 </ul>
                             </td>
-                        </tr>
-
+                            </tr>
+                            <tr>
+                                <td class="odd">What's the thing with the solar system?</td>
+                                <td class="even">I had no option. Sharon just delivered it and i didn't wan't to upset him so it stayed.</td>
+                            </tr>
+                        <tr><td></td><td><div class="solar-syst">
+                            <div class="sun"></div>
+                            <div class="mercury"></div>
+                            <div class="venus"></div>
+                            <div class="earth"></div>
+                            <div class="mars"></div>
+                            <div class="jupiter"></div>
+                            <div class="saturn"></div>
+                            <div class="uranus"></div>
+                            <div class="neptune"></div>
+                            <div class="pluto"></div>
+                            <div class="asteroids-belt"></div>
+                        </div></td></tr>
                         </tbody>
                     </table>
                 </div>
+
+
             </div>
 
             <!-------- CONTACT -------->
@@ -273,7 +308,7 @@
     </div>
 
     <div id="footer">
-        // TODO: Sharon - do we need a footer? also add permission checks, penetration test and unit testing.
+        // TODO: Sharon - do we need a footer? also add permission checks, penetration tests and unit testing.
     </div>
 </div>
 <script type="text/javascript" src="script.js"></script>
