@@ -23,43 +23,24 @@
 
 <body>
 <div id="mainwrap" class="flex-container" ng-controller="Ctrl">
+    <!--fork me link-->
+    <a href="https://github.com/yigaldviri/idoco/" class="hide-on-med-and-down">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"
+             class="fork-me-link" alt="Fork me on GitHub">
+    </a>
 
     <header>
+        <ul class="social-network social-circle">
+            <li><a href="http://idoco.github.io/map-chat" target="_blank" title="Map Chat"><img src="./favicon.ico" alt=""></a></li>
+        </ul>
         <div style="display: block">
             <!-- Title -->
-            <div class="container">
-                <div class="component">
-                    <ul class="grid">
-                        <li class="ot-letter-left"><span data-letter="I">I</span></li>
-                        <li class="ot-letter-top"><span data-letter="D">D</span></li>
-                        <li class="ot-letter-right"><span data-letter="O">O</span></li>
-                        <li class="ot-letter-bottom"><span data-letter="C">C</span></li>
-                        <li class="ot-letter-left"><span data-letter="O">O</span></li>
-
-                        <li class="ot-letter-right spacing"><span data-letter="-">-</span></li>
-
-                        <li class="ot-letter-bottom spacing"><span data-letter="W">W</span></li>
-                        <li class="ot-letter-left"><span data-letter="a">a</span></li>
-                        <li class="ot-letter-top"><span data-letter="s">s</span></li>
-
-                        <li class="ot-letter-right spacing"><span data-letter="O">O</span></li>
-                        <li class="ot-letter-bottom"><span data-letter="u">u</span></li>
-                        <li class="ot-letter-left"><span data-letter="r">r</span></li>
-
-                        <li class="ot-letter-top spacing"><span data-letter="M">M</span></li>
-                        <li class="ot-letter-right"><span data-letter="a">a</span></li>
-                        <li class="ot-letter-bottom"><span data-letter="n">n</span></li>
-                        <li class="ot-letter-left"><span data-letter="a">a</span></li>
-                        <li class="ot-letter-top"><span data-letter="g">g</span></li>
-                        <li class="ot-letter-right"><span data-letter="e">e</span></li>
-                        <li class="ot-letter-bottom"><span data-letter="r">r</span></li>
-
-
-                    </ul>
-                </div>
-            </div>
+            <h1 id="title-idoco" class="mdl-layout-title"><b>IDOCO</b></h1>
+            <div class="mdl-layout-title">Was our manager</div>
         </div>
     </header>
+
+
 
     <div id="content" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect stretch" ng-class="{'planet-background' : state === 'profile'}">
         <div class="mdl-tabs__tab-bar" ng-class="{'planet-title' : state === 'profile'}">
@@ -97,7 +78,7 @@
                                 <td class="even">As a descended of the High jewish ginger holy priests family he loves to make sacrifices in the holy temple and cure people of leprosy</td>
                             </tr>
                             <tr>
-                                <td class="odd">Where is Benny</td>
+                                <td class="odd">Where is Benny?</td>
                                 <td class="even">There is no Benny</td>
                             </tr>
                             <tr>
@@ -110,11 +91,11 @@
                             </tr>
                             <tr>
                                 <td class="odd">Role models</td>
-                                <td class="even">Einstein, Hawking, Newton, Turing, Walter Lewin, Bennet (brother), Miron, Amir Benayun, The Shadow, Shimon Parnas, Eli Luzon, Rachely Rotner, Moshe katzav, Liran grey shirt</td>
+                                <td class="even">Einstein, Hawking, Newton, Turing, Walter Lewin, Bennet (brother), Miron, Amir Benayun, The Shadow, Shimon Parnas, Eli Luzon, Rachely Rotner, Moshe katzav, Liran "grey-shirt"</td>
                             </tr>
                             <tr>
                                 <td class="odd">Moto</td>
-                                <td class="even">A developer who doesn't know the past, hi's present is thin and hi's future is vague</td>
+                                <td class="even">A developer who doesn't know hi's past, hi's present is thin and hi's future is vague</td>
                             </tr>
                             <tr>
                             <td class="odd">Extra</td>
@@ -127,7 +108,11 @@
                                     <li>Frankly, does give a damn</li>
                                 </ul>
                             </td>
-                        </tr>
+                            </tr>
+                            <tr>
+                                <td class="odd">What's the thing with the solar system?</td>
+                                <td class="even">I had no option. Sharon just delivered it and i didn't wan't to upset him so it stayed.</td>
+                            </tr>
                         <tr><td></td><td><div class="solar-syst">
                             <div class="sun"></div>
                             <div class="mercury"></div>
@@ -321,20 +306,10 @@
 
         </div>
     </div>
-    <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-            <div class="col-md-12 mdl-mini-footer__link-list">
-                <ul class="social-network social-circle">
-                    <li><a href="http://idoco.github.io/map-chat" target="_blank" title="Map Chat"><img src="./favicon.ico" alt=""></a></li>
-                    <li><a href="https://www.reddit.com" target="_blank" class="icoRss" title="Reddit"><i class="fa fa-reddit"></i></a></li>
-                    <li><a href="http://www.facebook.com" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="http://www.twitter.com" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="http://plus.google.com" target="_blank" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="http://www.linkedin.com" target="_blank" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+
+    <div id="footer">
+        // TODO: Sharon - do we need a footer? also add permission checks, penetration tests and unit testing.
+    </div>
 </div>
 <script type="text/javascript" src="script.js"></script>
 </body>
